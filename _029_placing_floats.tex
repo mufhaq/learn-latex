@@ -1,0 +1,21 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{float}
+
+\begin{document}
+Placing floats
+% https://www.learnlatex.org/en/more-07#placing-floats
+
+\lipsum[1-7]
+\begin{figure}[H] % "absolutely Here"
+    \centering
+    \includegraphics[width=0.5\textwidth]{LaTeX_logo.svg.png}
+    \caption{An example image}
+\end{figure}
+\lipsum[8-15]
+
+% However it is often not recommended to use `H`, because it may create large portions of white space in your document.
+\end{document}

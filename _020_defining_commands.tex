@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{xcolor}
+\usepackage[left=2in,right=1in]{geometry}
+
+% Define Commands
+\newcommand\kw[1]{\textbf{\itshape #1}}
+% In the definition [1] denotes the number of arguments and #1 denotes the first
+% argument that is supplied. You may have up to nine arguments, but it is
+% usually best to have just one argument, or sometimes none at all.
+\newcommand\kwb[1]{\textcolor{blue}{\itshape #1}}
+
+\begin{document}
+Defining commands
+% https://www.learnlatex.org/en/lesson-06\#defining-commands
+
+Something about \kw{apples} and \kw{oranges}.
+
+Something about \kwb{apples} and \kwb{oranges}.
+\end{document}

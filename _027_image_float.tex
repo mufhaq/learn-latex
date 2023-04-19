@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{lipsum}
+
+\begin{document}
+Making images float
+% https://www.learnlatex.org/en/lesson-07\#making-images-float
+
+% Traditionally in typesetting, particularly with technical documents, graphics
+% may move to another spot in the document. This is called a float. Images are
+% normally included as floats so they do not leave large gaps in the page.
+
+
+\lipsum[1-3]
+
+Test location.
+\begin{figure}[ht]
+    \centering % Use this instead of center environment
+    \includegraphics[width=0.5\textwidth]{LaTeX_logo.svg.png} % Relative size
+    \caption{An exmplae image}
+\end{figure}
+
+% h ‘Here’ (if possible)
+% t Top of the page
+% b Bottom of the page
+% p A dedicated page only for floats
+
+% Inside a float, you should use \centering if you want to horizontally center
+% content; this avoids both the float and center environment adding extra
+% vertical space.
+
+\lipsum[4-8]
+\end{document}

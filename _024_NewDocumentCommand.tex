@@ -1,0 +1,13 @@
+\documentclass{article}
+
+\usepackage{xcolor}
+%\usepackage{xparse} % Only for older LaTeX releases
+
+\NewDocumentCommand\kw{O{blue} m}{\textcolor{#1}{\itshape #2}} % One optional One mandatory
+
+\begin{document}
+\textbackslash NewDocumentCommand
+% https://www.learnlatex.org/en/more-06\#newdocumentcommand
+
+Something about \kw{apples} and \kw[red]{oranges}.
+\end{document}

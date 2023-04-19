@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\begin{document}
+Altering graphic appearance
+% https://www.learnlatex.org/en/lesson-07\#altering-graphic-appearance
+
+Text height
+\begin{center}
+    \includegraphics[height=0.2\textheight]{LaTeX_logo.svg.png} % IDK why error when with unit measure.
+\end{center}
+Text width
+\begin{center}
+    \includegraphics[height=0.2\textwidth]{LaTeX_logo.svg.png}
+\end{center}
+Clip and Trim
+\begin{center}
+    \includegraphics[width=2cm, height=2cm, clip, trim = 0 0 50 50]{LaTeX_logo.svg.png}
+\end{center}
+\end{document}

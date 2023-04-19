@@ -1,0 +1,19 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{trivfloat}
+\trivfloat{customfloat}
+
+\begin{document}
+Other types of float
+% https://www.learnlatex.org/en/more-07#other-types-of-float
+
+\graphicspath{{./img/}}
+
+\begin{customfloat}
+    \centering
+    \includegraphics[width=0.5\textwidth]{latex_logo.png}
+    \caption{An example image}
+\end{customfloat}
+\end{document}
