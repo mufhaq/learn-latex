@@ -3,8 +3,56 @@
 \usepackage{parskip}
 \usepackage{xcolor}
 \usepackage{array}
+\usepackage{booktabs}
 
 \begin{document}
-Merging celss
+Merging Cells
 % https://www.learnlatex.org/en/lesson-08#merging-cells
+
+\section{Merging cells}
+\begin{tabular}{lll}
+    \toprule
+    Animal  & Food  & Size      \\
+    \midrule
+    dog     & meat  & medium    \\
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+    fuath   & \multicolumn{2}{c}{unknown} \\
+    \bottomrule
+\end{tabular}
+
+\section{\textbackslash multicolumn on single cell}
+% You can also use \multicolumn on a single cell to prevent the application of
+% whatever you defined in the table preamble for the current column.
+\begin{tabular}{lll}
+    \toprule
+    \multicolumn{1}{c}{Animal}  & \multicolumn{1}{c}{Food}  & \multicolumn{1}{c}{Size}  \\ % Any preamble will not be applied
+    \midrule
+    dog     & meat  & medium    \\
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+    fuath   & \multicolumn{2}{c}{unknown} \\
+    \bottomrule
+\end{tabular}
+
+\section{Merging cells vertically (not supported)}
+Merging cells vertically by leaving empty lines.
+
+\begin{tabular}{lll}
+    \toprule
+    Group       & Animal    & size      \\
+    \midrule
+    herbivore   & horse     & large     \\
+                & deer      & medium    \\
+                & rabbit    & small     \\
+    \addlinespace
+    carnivore   & dog       & medium    \\
+                & cat       & small     \\
+                & lion      & large     \\
+    \addlinespace
+    omnivore    & crow      & small     \\
+                & bear      & large     \\
+                & pig       & medium    \\
+    \bottomrule
+\end{tabular}
 \end{document}
