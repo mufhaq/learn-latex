@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+Styling a column
+% https://www.learnlatex.org/en/more-08#styling-a-column
+
+\section{Styling}
+\begin{tabular}{>{\itshape}l<{:} *{2}{l}}
+    \toprule
+    Animal  & Food  & Size      \\
+    \midrule
+    dog     & meat  & medium    \\
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+    \bottomrule
+\end{tabular}
+
+\section{Remove the preamble from the 1-1 cell}
+\begin{tabular}{>{\itshape}l<{:} *{2}{l}}
+    \toprule
+    \multicolumn{1}{l}{Animal}  & Food  & Size      \\ % The preamble will not be applied
+    \midrule
+    dog     & meat  & medium    \\
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+    \bottomrule
+\end{tabular}
+\end{document}
