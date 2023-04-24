@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+Manipulating the space between columns
+% https://www.learnlatex.org/en/more-08#manipulating-the-space-between-columns
+
+\section{Set pads length using \textbackslash tabcolsep}
+\setlength\tabcolsep{1cm}
+\begin{tabular}{*{3}{l}}
+    Animal  & Food  & Size      \\
+    dog     & meat  & medium    \\
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+\end{tabular}
+
+\section{Using something arbitrary like @}
+% This will remove the padding between two columns or on either end, and 
+% instead put anything in between the columns you specify as an argument.
+\begin{tabular}{l@{ : }l@{\hspace{2cm}}l}
+    Animal  & Food  & Size      \\
+    dog     & meat  & medium    \\
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+\end{tabular}
+
+\section{Using something similar to @ with !}
+% The difference is, that it adds its argument in center of the space between
+% two columns.
+\begin{tabular}{l!{:}ll}
+    Animal  & Food  & Size      \\
+    dog     & meat  & medium    \\
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+\end{tabular}
+\end{document}
