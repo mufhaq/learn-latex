@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{booktabs}
+% The alignment of numbers in tables can be handled by the column type S that 
+% is provided by the siunitx package.
+\usepackage{siunitx}
+
+\begin{document}
+Numeric alignment in columns
+% https://www.learnlatex.org/en/more-08#numeric-alignment-in-columns
+
+\begin{tabular}{SS}
+    \toprule
+    {Values}    & {More Values}     \\
+    \midrule
+    1           &   2.3456          \\
+    1.2         &   34.2345         \\
+    -2.3        &   90.473          \\
+    40          &   5642.5          \\
+    5.3         &   1.2e3           \\
+    0.2         &    1e4            \\
+    \bottomrule
+\end{tabular}
+% Note that any non-numeric cell must be “protected” by enclosing it in braces.
+\end{document}
