@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+Vertical rules
+% https://www.learnlatex.org/en/more-08#vertical-rules
+
+\section{Vertical rules}
+\begin{tabular}{|l|ll}
+    \toprule
+    Animal  & Food  & Size      \\
+    \midrule
+    dog     & meat  & medium    \\
+    \cmidrule{1-1}
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+    \bottomrule
+\end{tabular}
+
+\section{Horizontal rules alternative}
+% vertical rules don’t work with the horizontal rules provided by booktabs.
+% We can use \hline (for top, mid and bottom) and \cline (for \cmidrule)
+\begin{tabular}{|l|l|l|}
+    \hline
+    Animal  & Food  & Size      \\
+    \hline
+    dog     & meat  & medium    \\
+    \cline{1-1}
+    horse   & hay   & large     \\
+    frog    & flies & small     \\
+    \hline
+\end{tabular}
+\end{document}
