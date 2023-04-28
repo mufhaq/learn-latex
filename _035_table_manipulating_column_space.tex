@@ -17,7 +17,7 @@ Manipulating the space between columns
     frog    & flies & small     \\
 \end{tabular}
 
-\section{Using something arbitrary like @}
+\section{Using something arbitrary like @ and remove the space}
 % This will remove the padding between two columns or on either end, and 
 % instead put anything in between the columns you specify as an argument.
 \begin{tabular}{l@{ : }l@{\hspace{2cm}}l}
@@ -27,7 +27,7 @@ Manipulating the space between columns
     frog    & flies & small     \\
 \end{tabular}
 
-\section{Using something similar to @ with !}
+\section{Using something similar to @ with ! without removing the space}
 % The difference is, that it adds its argument in center of the space between
 % two columns.
 \begin{tabular}{l!{:}ll}
