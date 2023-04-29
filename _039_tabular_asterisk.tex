@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{array}
+
+
+\begin{document}
+tabular*
+% https://www.learnlatex.org/en/more-08#tabular
+
+\section{tabular}
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    A & B \\
+    C & D \\
+    \hline
+\end{tabular}
+\end{center}
+
+\section{tabular* with 0.5 textwidth}
+\begin{center}
+\begin{tabular*}{.5\textwidth}{@{\extracolsep{\fill}}|c|c|@{}}
+% Additional width argument ^
+    \hline
+    A & B \\
+    C & D \\
+    \hline
+\end{tabular*}
+\end{center}
+
+\section{tabular* with empty textwidth}
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|c|c|@{}}
+% Additional width argument ^
+    \hline
+    A & B \\
+    C & D \\
+    \hline
+\end{tabular*}
+\end{center}
+\end{document}
