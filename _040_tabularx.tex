@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{tabularx}
+
+\begin{document}
+tabularx
+% https://www.learnlatex.org/en/more-08#tabularx
+
+\section{tabular}
+\begin{center}
+\begin{tabular}{|l|p{2cm}|}
+    \hline
+    A & B B B B B B B B B B B B B B B B B B B B B B B B \\
+    C & D D D D D D D                                   \\
+    \hline
+\end{tabular}
+\end{center}
+
+\section{tabularx with 0.5 textwidth}
+% The tabularx environment, provided by the package of the same name, has a
+% similar syntax to tabular* but instead of adjusting the inter-column space,
+% adjusts the widths of columns specified by a new column type, X. This is
+% equivalent to a specification of p{...} for an automatically determined width.
+\begin{center}
+\begin{tabularx}{.5\textwidth}{|l|X|}
+    \hline
+    A & B B B B B B B B B B B B B B B B B B B B B B B B \\
+    C & D D D D D D D                                   \\
+    \hline
+\end{tabularx}
+\end{center}
+
+\section{tabularx with empty textwidth}
+\begin{center}
+\begin{tabularx}{\textwidth}{|l|X|}
+    \hline
+    A & B B B B B B B B B B B B B B B B B B B B B B B B \\
+    C & D D D D D D D                                   \\
+    \hline
+\end{tabularx}
+\end{center}
+
+\section{tabularx vs tabular* vs tabular* with \\ \textbackslash extracolsep \textbackslash fill}
+\begin{center}
+\begin{tabularx}{\textwidth}{|l|X|}
+    \hline
+    A & B B B B B B B B B B B B B B B B B B B B B B B B \\
+    C & D D D D D D D                                   \\
+    \hline
+\end{tabularx}
+
+\begin{tabular*}{\textwidth}{|l|l|}
+    \hline
+    A & B B B B B B B B B B B B B B B B B B B B B B B B \\
+    C & D D D D D D D                                   \\
+    \hline
+\end{tabular*}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|l|l|}
+    \hline
+    A & B B B B B B B B B B B B B B B B B B B B B B B B \\
+    C & D D D D D D D                                   \\
+    \hline
+\end{tabular*}
+\end{center}
+\end{document}
