@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\usepackage[paperheight=8cm, paperwidth=8cm]{geometry}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{longtable}
+
+\begin{document}
+Multi-page tables
+% https://www.learnlatex.org/en/more-08#multi-page-tables
+
+% A tabular forms an unbreakable box so it must be small enough to fit on one
+% page, and is often placed in a floating table environment.
+\begin{longtable}{|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{A Long Table}    \\
+    \hline
+    Left side       & Right side        \\
+    \hline
+    \endhead % Automatically add bottom line in every tables.
+    \hline
+    \endfoot
+    aa              & bb                \\
+    Entry           & b                 \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & bbb               \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & b                 \\
+    a               & b b b b b b       \\
+    a               & b b b b b         \\
+    a               & b b               \\
+    A Wider Entry   & b                 \\
+\end{longtable}
+\end{document}
